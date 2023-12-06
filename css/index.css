@@ -40,7 +40,6 @@ header > nav > ul > li:first-child {
 header > nav > ul > li > a {
   display: inline-block;
   font-size: 1.5rem;
-  font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   color: #111;
   /* width: 120px; */
@@ -130,10 +129,18 @@ main {
 }
 
 #categoryIcon > ul > li {
+  text-align: center;
   width: 60px;
   height: 60px;
 }
-.IndexIcon {
-  width: 60px;
-  height: 60px;
+
+#categoryIcon > ul > li > a > span {
+  color: #111;
+  font-size: 4rem;
+}
+
+#categoryIcon > ul > li > a > p {
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
