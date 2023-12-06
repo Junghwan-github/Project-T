@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 html,
 body,
 div,
@@ -87,6 +89,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 10px;
   vertical-align: baseline;
 }
