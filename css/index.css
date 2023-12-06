@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 #logo a {
+=======
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+#logo a {
+  font-family: "Noto Sans KR", sans-serif;
+>>>>>>> 84e5c1cb44bd11a6fa787895e74ee93430bd0e6d
   font-size: 2.2rem;
   font-weight: 700;
   color: #87c16c;

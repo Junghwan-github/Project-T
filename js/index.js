@@ -1,6 +1,6 @@
 /* 슬라이더 */
 $(document).ready(function () {
-  $(".slider_tab1").bxSlider();
+  $(".slider").bxSlider();
 });
 
 $(document).ready(function () {
