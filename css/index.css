@@ -114,11 +114,22 @@ main {
 .xi-search {
   font-size: 2.6rem;
 }
-
-.calendarIcon a img {
-  padding-left: 15px;
-  width: 60px;
-  height: 60px;
+.calendarIcon > a {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0 0 5px #ccc;
+  margin-left: 10px;
+  width: 56px;
+  height: 56px;
+}
+.calendarIcon > a > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
 }
 
 /* 카테고리 섹션 */
@@ -137,18 +148,19 @@ main {
 #categoryIcon > ul > li {
   text-align: center;
   width: 60px;
-  height: 60px;
-}
-
-#categoryIcon > ul > li > a > span {
-  color: #111;
-  font-size: 4rem;
+  height: 50px;
 }
 
 #categoryIcon > ul > li > a > p {
   color: #111;
   font-size: 1.2rem;
   font-weight: 500;
+  margin-top: 5px;
+}
+
+.IndexIcon {
+  width: 50px;
+  height: 50px;
 }
 
 #visual {
