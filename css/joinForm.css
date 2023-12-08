@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+#logo a {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #87c16c;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+}
+
+header {
+  width: 100%;
+}
+
+header > nav {
+  position: relative;
+  width: 1180px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+header > nav > ul {
+  float: right;
+  text-align: center;
+}
+
+header > nav > ul > li {
+  line-height: 80px;
+  display: inline-block;
+}
+
+header > nav > ul > li:first-child {
+  line-height: 80px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header > nav > ul > li > a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #111;
+  /* width: 120px; */
+}
+
+header > nav > ul .tab {
+  float: left;
+  width: 600px;
+  height: 290px;
+}
+
+/* main 가입 폼 */
+main {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.joinForm > div > h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+.joinForm > div > p {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.privacyInfo {
+  margin-bottom: 20px;
+}
+
+.privacyInfo textarea:nth-child(n) {
+  width: 414px;
+  height: 70px;
+}
+.privacyInfo input:nth-child(n) {
+  margin-bottom: 10px;
+}
+.privacyInfo div:nth-child(3) {
+  float: right;
+}
+
+.formItem {
+  position: relative;
+}
+
+.formItem input::placeholder {
+  color: #999;
+}
+
+.formItem input:nth-child(n) {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 420px;
+  height: 40px;
+  padding-left: 40px;
+
+  background-color: #fff;
+
+  font-weight: 500;
+
+  border: 3px solid #cee8c4;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.formItem img:nth-child(n) {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  transform: translate(0, -50%);
+}
+
+.inputMg {
+  margin-bottom: 15px;
+}
+.formList select {
+  width: 420px;
+  height: 40px;
+  padding-left: 35px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+
+  color: #999;
+  font-weight: 500;
+  border: 3px solid #cee8c4;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+/* 주소창 */
+/* .formItemAddr {
+  border: 1px solid #111;
+} */
+.inputAddr {
+  box-sizing: border-box;
+  width: 210px;
+  height: 30px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+
+  border: 3px solid #cee8c4;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
