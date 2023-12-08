@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* 헤드 */
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  background-color: #d4c0c0;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+/* 백그라운드 배경 */
+.backgroundColor {
+  background-image: url(../images/background\ color.jpg);
+}
+
+/* 검색창 */
+.searchBox {
+  display: flex;
+  justify-content: center;
+}
+
+.sBox {
+  width: 400px;
+  height: 40px;
+  border-radius: 15px;
+  margin-top: 200px;
+}
+
+/* 메인 버튼 */
+.mainBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.mBtn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50% 50% 50% 50%;
+  margin: 50px;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.mBtn:hover {
+  background: silver;
+}
+
+/* 탭 버튼 */
+.TabBtn {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.tBtn {
+  border-radius: 15px;
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  font-weight: bold;
+  text-align: center;
+  border: #000000 solid 1px;
+  background-color: #ffffff;
+}
+
+.tBtn:hover {
+  background: silver;
+}
+
+/* 컨텐츠 아이템, 히든 슬라이드 창 */
+.items {
+  max-width: 900px;
+  max-height: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  display: flex;
+  margin: 10px auto;
+}
+
+.items > div > img {
+  max-height: 800px;
+  max-width: 300px;
+  border-radius: 15px;
+  float: left;
+}
+
+.items > .textul {
+  float: right;
+  list-style: none;
+}
+
+.textul > #listTitle {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.textul > #address {
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+/*  히든 슬라이드창  */
+.hidden > .textul {
+  height: 600px;
+  max-width: 900px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.slidesButton {
+  position: absolute;
+  top: 180px;
+  right: 30px;
+  border: none;
+  background-color: white;
+}
+
+/* TOP 상단 이동 버튼 */
+.topBtn {
+  cursor: pointer;
+  background-color: #b88424;
+  color: #ffffff;
+  font-size: large;
+  font-weight: bold;
+  height: 40px;
+  width: 50px;
+  border: none;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+}
+
+/* 푸터 위치 */
+footer {
+  background-color: #d4c0c0;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  margin-top: 200px;
+}

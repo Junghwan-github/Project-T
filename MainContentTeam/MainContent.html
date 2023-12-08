@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>컨텐츠 메인 HTML</title>
+    <!-- css 링크 -->
+    <link rel="stylesheet" href="css/MainContent.css" />
+  </head>
+  <body>
+        <!-- 헤드 위치 -->
+        <header></header>
+
+    <div class="container">
+    <!-- 검색창과 3개의 메인 버튼, 백그라운드 배경 -->
+<div class="backgroundColor">
+  <div>
+    <div class="searchBox">
+      <input type="text" class="sBox" onclick="" placeholder=" 검색창 구현" onfocus="this.placeholder=''" onblur="this.placeholder=' 검색창 구현'"><br />
+    </div>
+  </div>
+
+    <div>
+      <div class="mainBtn">
+        <input type="button" class="mBtn" onclick="" value="숙소"/><br />
+        <input type="button" class="mBtn" onclick="" value="핫플"/><br />
+        <input type="button" class="mBtn" onclick="" value="행사"/>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 7개 지역 탭 버튼 부분 -->
+    <div>
+      <div class="TabBtn">
+        <input type="button" class="tBtn" value="남구" onclick="" /><br />
+        <input type="button" class="tBtn" value="달서구" onclick="" /><br />
+        <input type="button" class="tBtn" value="달성군" onclick="" /><br />
+        <input type="button" class="tBtn" value="동구" onclick="" /><br />
+        <input type="button" class="tBtn" value="북구" onclick="" /><br />
+        <input type="button" class="tBtn" value="서구" onclick="" />
+        <br />
+        <input type="button" class="tBtn" value="수성구" onclick="" />
+      </div>
+    </div>
+
+    <!-- 컨텐츠 아이템, 히든 슬라이드 창 -->
+    <div class="contentbox">
+        <div class="items">
+        <div class="imgBox">
+          <img src="images/서문시장.jpg"></img>
+        </div>
+        <ul class="textul">
+          <li id="listTitle">서문시장</li>
+          <li id="address">대구 수성구 두산동 512</li>
+        </ul>
+      </div>
+      
+      <!-- 히든 슬라이드창 -->
+        <div class="slidesBtn">
+            <div class="hidden">
+            <ul class="textul">
+              <li id="listTitle">이곳은 상세 페이지 입니다.</li>
+              <li id="address">히든창 구현</li>
+            </ul>
+          </div>
+        </div>
+
+    <!-- TOP 상단 이동 버튼 -->
+<div>
+  <input type="button" class="topBtn" value="TOP" onclick="window.scrollTo(0,0);"></input>
+</div>
+
+    <!-- js 링크 -->
+    <script src="js/hiddenSlides.js"></script>
+
+  </div>
+
+      <!-- 푸터 위치 -->
+      <footer></footer>
+  </body>
+</html>
