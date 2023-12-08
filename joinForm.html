@@ -21,139 +21,156 @@
         </ul>
       </nav>
     </header>
+    <!-- 메인 -->
     <main>
       <div class="container">
-      <form action="#" method="post" class="joinForm">
-        <div>
-          <h1>회원 가입</h1>
-          <p>이용 약관 안내</p>
-          <div class="privacyInfo">
-            <div id="checkTerm1">
-              <textarea ></textarea><br>
-              <input type="radio" id="termResYes1"value="Y" >
-              <label for="termRes1">동의합니다.</label>
+        <form action="#" method="post" class="joinForm">
+          <div class="joinInfo">
+            <h1>회원 가입</h1>
+            <ul>
+              <li><img src="./images/1_1.png" alt="1" /></li>
+              <li><img src="./images/selected2.png" alt="2" /></li>
+              <li><img src="./images/3_1.png" alt="3" /></li>
+            </ul>
+          </div>
+          <div class="formList">
+            <!-- 아이디 -->
+            <div class="formItem inputMg">
+              <img src="./images/user.png" alt="이름이미지" />
+              <input
+                type="text"
+                id="id"
+                name="id"
+                placeholder="아이디"
+                class="joinInput"
+                value
+                autofocus
+                autocapitalize="off"
+              />
             </div>
-            <div id="checkTerm2">
-              <textarea ></textarea><br>
-              <input type="radio" id="termResYes2"value="Y"  name="checkTerm2" >
-              <label for="termResYes2">동의합니다.</label>
-              <input type="radio" id="termResNo1"value="N"  name="checkTerm2">
-              <label for="termResNo1">동의하지 않습니다.</label>
+            <!-- 비밀번호,비밀번호 입력 -->
+            <div class="formItem">
+              <img src="./images/lock.png" alt="비밀번호이미지" />
+              <input
+                type="password"
+                id="pwd1"
+                name="pwd1"
+                placeholder="비밀번호"
+                class="joinInput"
+                value
+              />
             </div>
-            <div>
-            <input type="checkbox" id="chkAll">
-            <label for="chkAll"><span>전체 동의하기</span></label>
+            <div class="formItem inputMg">
+              <img src="./images/lock.png" alt="비밀번호이미지" />
+              <input
+                type="password"
+                id="pwd2"
+                name="pwd2"
+                placeholder="비밀번호 확인"
+                class="joinInput"
+                value
+              />
             </div>
+            <!-- 이름,닉네임-->
+            <div class="formItem">
+              <img src="./images/user.png" alt="이름이미지" />
+              <input
+                type="text"
+                id="uName"
+                name="uName"
+                placeholder="이름"
+                class="joinInput"
+                value
+              />
+            </div>
+            <div class="formItem inputMg">
+              <img src="./images/nickName.png" alt="닉네임이미지" />
+              <input
+                type="text"
+                id="nickName"
+                name="nickName"
+                placeholder="닉네임"
+                class="joinInput"
+                value
+              />
+            </div>
+            <!-- 휴대전화번호, 생년월일 -->
+            <div class="formItem">
+              <img src="./images/thickPhone.png" alt="휴대전화이미지" />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="010-1111-1111"
+                pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+              />
+            </div>
+            <div class="formItem inputMg">
+              <img src="./images/birthDate.png" alt="달력이미지" />
+              <input
+                type="text"
+                id="birthDate"
+                name="birthDate"
+                placeholder="생년월일 8자리"
+                class="joinInput"
+                value
+              />
+            </div>
+            <!-- 성별 -->
+            <div class="formItem">
+              <select name="gender" id="gender">
+                <option value="gender">성별</option>
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+                <option value="other">그 외</option>
+              </select>
+            </div>
+            <!-- 주소 -->
+            <div class="formItemAddr">
+              <input
+                type="text"
+                id="postcode"
+                placeholder="우편번호"
+                class="inputAddr"
+              />
+              <input
+                type="button"
+                onclick="execDaumPostcode()"
+                value="우편번호 찾기"
+              /><br />
+              <input
+                type="text"
+                id="roadAddress"
+                placeholder="도로명주소"
+                class="inputAddr"
+              />
+              <input
+                type="text"
+                id="jibunAddress"
+                placeholder="지번주소"
+                class="inputAddr"
+              /><br />
+              <span id="guide" style="color: #999; display: none"></span>
+              <input
+                type="text"
+                id="detailAddress"
+                placeholder="상세주소"
+                class="inputAddr"
+              />
+              <input
+                type="text"
+                id="extraAddress"
+                placeholder="참고항목"
+                class="inputAddr"
+              />
+            </div>
+            <!-- 버튼 -->
           </div>
-        </div>
-        <div>
-        <div class="formList">
-          <!-- 아이디 -->
-          <div class="formItem inputMg">
-            <img src="./images/user.png" alt="이름이미지">
-            <input
-              type="text"
-              id="id"
-              name="id"
-              placeholder="아이디"
-              class="joinInput"
-              value
-              autofocus
-              autocapitalize="off"
-            />
+          <div class="submitBttn">
+            <button type="submit">이메일 인증하기</button>
           </div>
-          <!-- 비밀번호,비밀번호 입력 -->
-          <div class="formItem ">
-            <img src="./images/lock.png" alt="비밀번호이미지">
-            <input
-            type="password"
-            id="pwd1"
-            name="pwd1"
-            placeholder="비밀번호"
-            class="joinInput"
-            value
-            />
-          </div>
-          <div class="formItem inputMg">
-            <img src="./images/lock.png" alt="비밀번호이미지">
-            <input
-              type="password"
-              id="pwd2"
-              name="pwd2"
-              placeholder="비밀번호 확인"
-              class="joinInput"
-              value
-            />
-          </div>
-          <!-- 이름,닉네임-->
-          <div class="formItem">
-            <img src="./images/user.png" alt="이름이미지">
-            <input
-              type="text"
-              id="uName"
-              name="uName"
-              placeholder="이름"
-              class="joinInput"
-              value
-            />
-          </div>
-          <div class="formItem inputMg">
-            <img src="./images/nickName.png" alt="닉네임이미지">
-            <input
-              type="text"
-              id="nickName"
-              name="nickName"
-              placeholder="닉네임"
-              class="joinInput"
-              value
-            />
-          </div>
-          <!-- 휴대전화번호, 생년월일 -->
-          <div class="formItem">
-            <img src="./images/thickPhone.png" alt="휴대전화이미지">
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="010-1111-1111"
-              pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-            />
-          </div>
-          <div class="formItem inputMg">
-            <img src="./images/birthDate.png" alt="달력이미지">
-            <input
-              type="text"
-              id="birthDate"
-              name="birthDate"
-              placeholder="생년월일 8자리"
-              class="joinInput"
-              value
-            />
-          </div>
-          <!-- 성별 -->
-          <div class="formItem">
-            <select name="gender" id="gender">
-              <option value="gender">성별</option>
-              <option value="male">남성</option>
-              <option value="female">여성</option>
-              <option value="other">그 외</option>
-            </select>
-          </div>
-          <!-- 주소 -->
-          <div class="formItemAddr">
-            <input type="text" id="postcode" placeholder="우편번호" class="inputAddr">
-            <input type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br>
-            <input type="text" id="roadAddress" placeholder="도로명주소" class="inputAddr">
-            <input type="text" id="jibunAddress" placeholder="지번주소" class="inputAddr"><br>
-            <span id="guide" style="color:#999; display: none;"></span>
-            <input type="text" id="detailAddress" placeholder="상세주소" class="inputAddr">
-            <input type="text" id="extraAddress" placeholder="참고항목" class="inputAddr">
-          </div>
-          <!-- 버튼 -->
-        </div>
-        <div><button type="submit">이메일 인증하기</button></div>
-      </form>
-    </div>
+        </form>
+      </div>
     </main>
     <footer></footer>
   </body>

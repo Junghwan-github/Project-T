@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="./css/joinForm.css" />
+</head>
+<body>
+  <header>
+    <!-- 네비게이션 -->
+    <nav>
+      <h1 id="logo"><a href="#">Project T</a></h1>
+      <ul>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">로그인</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <form action="#" method="post" class="joinForm">
+        <div>
+          <h1>이용 약관 안내</h1>
+          
+          <div class="privacyInfo">
+            <div id="checkTerm1">
+              <textarea></textarea><br />
+              <input type="radio" id="termResYes1" value="Y" />
+              <label for="termRes1">동의합니다.</label>
+            </div>
+            <div id="checkTerm2">
+              <textarea></textarea><br />
+              <input
+                type="radio"
+                id="termResYes2"
+                value="Y"
+                name="checkTerm2"
+              />
+              <label for="termResYes2">동의합니다.</label>
+              <input
+                type="radio"
+                id="termResNo1"
+                value="N"
+                name="checkTerm2"
+              />
+              <label for="termResNo1">동의하지 않습니다.</label>
+            </div>
+            <div id="allCheck">
+              <input type="checkbox" id="chkAll" />
+              <label for="chkAll"><span>전체 동의하기</span></label>
+            </div>
+          </div>
+        </div>
+        </form>
+  </main>
+
+</body>
+</html>

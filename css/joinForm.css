@@ -65,11 +65,21 @@ main {
 
 .joinForm > div > h1 {
   font-size: 2.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .joinForm > div > p {
   font-size: 1.6rem;
   margin-bottom: 20px;
+}
+
+.joinInfo {
+  width: 400px;
+  height: 100px;
+}
+
+.joinInfo ul img:nth-child(n) {
+  width: 20px;
+  height: 20px;
 }
 
 .privacyInfo {
@@ -148,4 +158,43 @@ main {
   border: 3px solid #cee8c4;
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.formItemAddr input[type*="button"] {
+  padding: 3px 10px;
+  border-radius: 10px;
+  border: none;
+
+  background-color: #87c16c;
+  color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* 전송 버튼 */
+.submitBttn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.submitBttn button {
+  margin: 0 auto;
+  width: 250px;
+  height: 40px;
+
+  border-radius: 10px;
+  border: none;
+
+  background-color: #87c16c;
+  color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  word-spacing: 0.6rem;
+}
+
+/* footer */
+footer {
+  width: 420px;
+  height: 300px;
 }
