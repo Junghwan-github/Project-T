@@ -22,7 +22,6 @@
       </nav>
     </header>
     <!-- 메인 -->
-    <!-- 주석 한 줄 -->
     <main>
       <div class="container">
         <form action="#" method="post" class="joinForm">
@@ -40,14 +39,25 @@
               <img src="./images/user.png" alt="이름이미지" />
               <input
                 type="text"
-                id="id"
+                id="emailId"
                 name="id"
-                placeholder="아이디"
-                class="joinInput"
-                value
-                autofocus
+                placeholder="이메일"
+                class="email"
+                value=""
                 autocapitalize="off"
-              />
+                />@
+                <input type="text" id="emailDomain" class="email" value="" title="이메일 도메인" placeholder="이메일 도메인" maxlength="18"/>
+                <select class="select" title="도메인 선택" onclick="setEmailDomain(this.value);return false;">
+                  <option value="">-선택-</option>
+                  <option value="naver.com">naver.com</option>
+                  <option value="gmail.com">gmail.com</option>
+                  <option value="hanmail.net">hanmail.net</option>
+                  <option value="hotmail.com">hotmail.com</option>
+                  <option value="korea.com">korea.com</option>
+                  <option value="nate.com">nate.com</option>
+                  <option value="yahoo.com">yahoo.com</option>
+                </select>
+                <!-- class="joinInput" -->
             </div>
             <!-- 비밀번호,비밀번호 입력 -->
             <div class="formItem">
@@ -102,6 +112,7 @@
                 type="tel"
                 id="phone"
                 name="phone"
+                class="joinInput"
                 placeholder="010-1111-1111"
                 pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
               />
@@ -118,7 +129,7 @@
               />
             </div>
             <!-- 성별 -->
-            <div class="formItem">
+            <div class="formItem inputMg">
               <select name="gender" id="gender">
                 <option value="gender">성별</option>
                 <option value="male">남성</option>
