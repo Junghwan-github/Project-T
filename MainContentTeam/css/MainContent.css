@@ -150,6 +150,7 @@ header {
   position: fixed;
   bottom: 100px;
   right: 100px;
+  z-index: 9999;
 }
 
 /* 푸터 위치 */
@@ -161,3 +162,20 @@ footer {
   height: 200px;
   margin-top: 200px;
 }
+
+
+/*페이지네이션*/
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.mainItems {
+  list-style: none;
+}
+
+.paginationContainer > .prevButton, .pageNumberBttn, .nextButton {
+  cursor: pointer;
+  margin: 10px;
+}
+

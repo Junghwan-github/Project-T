@@ -45,32 +45,50 @@
     </div>
 
     <!-- 컨텐츠 아이템, 히든 슬라이드 창 -->
-    <div class="contentbox">
+    <ul class="mainItems">
+      <li class="contentbox">
         <div class="items">
-        <div class="imgBox">
-          <img src="images/서문시장.jpg"></img>
+          <div class="imgBox">
+            <img src="images/서문시장.jpg"></img>
+          </div>
+          <ul class="textul">
+            <li id="listTitle">서문시장</li>
+            <li id="address">대구 수성구 두산동 512</li>
+          </ul>
         </div>
-        <ul class="textul">
-          <li id="listTitle">서문시장</li>
-          <li id="address">대구 수성구 두산동 512</li>
-        </ul>
-      </div>
       
       <!-- 히든 슬라이드창 -->
+
         <div class="slidesBtn">
             <div class="hidden">
             <ul class="textul">
               <li id="listTitle">이곳은 상세 페이지 입니다.</li>
               <li id="address">히든창 구현</li>
+              <div>
+                <button class="hiddenSlides" onclick="moreReview()">더보기</button>
+                <!-- 위에 버튼은 리뷰가 여러개라서 한 창에 다 안담길때 
+                몇개만 보이게 하고 나머지 리뷰는 더보기로 열고 닫게-->
+              </div>
             </ul>
           </div>
         </div>
+      </li>
+    </ul>
+
+
+        <!-- 페이지네이션 -->
+
+      <div class="paginationContainer">
+        <div class="prevButton">이전</div>
+        <div class="pageNumberBttn"><span class="numberBttn">1</span></div>
+        <div class="nextButton">이후</div>
+      </div>
+
 
     <!-- TOP 상단 이동 버튼 -->
 <div>
   <input type="button" class="topBtn" value="TOP" onclick="window.scrollTo(0,0);"></input>
 </div>
-
     <!-- js 링크 -->
     <script src="js/hiddenSlides.js"></script>
 
