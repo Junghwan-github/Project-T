@@ -245,4 +245,4 @@ hidden.appendChild(moreReviewButton);
 //   }
 // });
 
-//구현하고 싶었는데 작동을 안하네용;;
+//구현하고 싶었는데 작동을 안하네용
