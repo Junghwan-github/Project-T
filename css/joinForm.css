@@ -63,49 +63,64 @@ main {
   justify-content: center;
 }
 
-.joinForm > div > h1 {
+.joinForm > div > h1,
+.joinForm2 > div > h1 {
   font-size: 2.4rem;
   margin-bottom: 30px;
 }
-.joinForm > div > p {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-}
 
-.joinInfo {
+.joinInfo,
+.termInfo {
   width: 420px;
   height: 70px;
 }
 
-.joinInfo h1, .joinInfo ul, .joinInfo ul li {
+.joinInfo h1,
+.joinInfo ul,
+.joinInfo ul li,
+.termInfo h1,
+.termInfo ul,
+.termInfo ul li {
   display: inline-block;
 }
 
-.joinInfo ul {
+.joinInfo ul,
+.termInfo ul {
   float: right;
 }
 
-.joinInfo ul img:nth-child(n) {
+.joinInfo ul img:nth-child(n),
+.termInfo ul img:nth-child(n) {
   width: 25px;
   height: 25px;
   margin: 0 5px;
 }
 
 .privacyInfo {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-.privacyInfo textarea:nth-child(n) {
+.privacyInfo iframe {
   width: 414px;
-  height: 70px;
-}
-.privacyInfo input:nth-child(n) {
-  margin-bottom: 10px;
-}
-.privacyInfo div:nth-child(3) {
-  float: right;
+  height: 450px;
+  background-color: #fff;
+  border: 3px solid #cee8c4;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+.privacyInfo div > div {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+.privacyInfo div > div > input {
+  margin: 5px 5px 5px 5px;
+}
+.privacyInfo div > div > label {
+  font-size: 1.4rem;
+  vertical-align: baseline;
+}
 .formItem {
   position: relative;
 }
@@ -116,7 +131,7 @@ main {
 
 .email {
   box-sizing: border-box;
-  width:150px;
+  width: 150px;
   height: 38px;
   padding-left: 40px;
   border: none;
@@ -126,9 +141,9 @@ main {
   padding: 0 10px;
 }
 
-.formList  div:first-child select {
+.formList div:first-child select {
   box-sizing: border-box;
-  width:100px;
+  width: 100px;
 }
 
 .formItem {
@@ -141,7 +156,7 @@ main {
 }
 
 .joinInput {
-  width:100%;
+  width: 100%;
   height: 100%;
   display: inline-block;
   box-sizing: border-box;
@@ -149,7 +164,6 @@ main {
   border-radius: 10px;
   padding-left: 40px;
   font-weight: 500;
-  
 }
 
 .formItem img:nth-child(n) {
@@ -161,8 +175,8 @@ main {
   transform: translate(0, -50%);
 }
 
-.inputMg {
-  margin-bottom: 15px;
+.inputSpace {
+  margin-bottom: 25px;
 }
 .formList select {
   width: 420px;
@@ -199,12 +213,14 @@ main {
 }
 
 /* 전송 버튼 */
-.submitBttn {
+.submitBttn,
+.termCheckBttn {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
-.submitBttn button {
+.submitBttn button,
+.termCheckBttn button {
   margin: 0 auto;
   width: 250px;
   height: 40px;
@@ -219,6 +235,16 @@ main {
   font-size: 1.5rem;
   letter-spacing: 1px;
   word-spacing: 0.6rem;
+}
+
+/* error Msg */
+.errorText {
+  list-style-type: disc;
+  color: red;
+}
+
+.errorView {
+  display: inline-block;
 }
 
 /* footer */

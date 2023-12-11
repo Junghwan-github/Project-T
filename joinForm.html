@@ -6,9 +6,6 @@
     <title>회원가입</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="./css/joinForm.css" />
-    <!-- 다음 주소 api -->
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script src="./js/joinForm.js"></script>
   </head>
   <body>
     <header>
@@ -24,7 +21,12 @@
     <!-- 메인 -->
     <main>
       <div class="container">
-        <form action="#" method="post" class="joinForm">
+        <form
+          action="#"
+          method="post"
+          class="joinForm2"
+          onsubmit="validateEmail(event)"
+        >
           <div class="joinInfo">
             <h1>회원 가입</h1>
             <ul>
@@ -34,8 +36,8 @@
             </ul>
           </div>
           <div class="formList">
-            <!-- 아이디 -->
-            <div class="formItem inputMg">
+            <!-- 이메일 아이디 -->
+            <div class="formItem inputSpace">
               <img src="./images/user.png" alt="이름이미지" />
               <input
                 type="text"
@@ -45,20 +47,33 @@
                 class="email"
                 value=""
                 autocapitalize="off"
-                />@
-                <input type="text" id="emailDomain" class="email" value="" title="이메일 도메인" placeholder="이메일 도메인" maxlength="18"/>
-                <select class="select" title="도메인 선택" onclick="setEmailDomain(this.value);return false;">
-                  <option value="">-선택-</option>
-                  <option value="naver.com">naver.com</option>
-                  <option value="gmail.com">gmail.com</option>
-                  <option value="hanmail.net">hanmail.net</option>
-                  <option value="hotmail.com">hotmail.com</option>
-                  <option value="korea.com">korea.com</option>
-                  <option value="nate.com">nate.com</option>
-                  <option value="yahoo.com">yahoo.com</option>
-                </select>
-                <!-- class="joinInput" -->
+              />@
+              <input
+                type="text"
+                id="emailDomain"
+                class="email"
+                value=""
+                title="이메일 도메인"
+                placeholder="이메일 도메인"
+                maxlength="18"
+              />
+              <select
+                class="select"
+                id="domainSelect"
+                title="도메인 선택"
+                onchange="updateDomain()"
+              >
+                <option value="">-선택-</option>
+                <option value="naver.com">naver.com</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="hanmail.net">hanmail.net</option>
+                <option value="hotmail.com">hotmail.com</option>
+                <option value="korea.com">korea.com</option>
+                <option value="nate.com">nate.com</option>
+                <option value="yahoo.com">yahoo.com</option>
+              </select>
             </div>
+            <div class="errorText" id="idMsg" style="display: none"></div>
             <!-- 비밀번호,비밀번호 입력 -->
             <div class="formItem">
               <img src="./images/lock.png" alt="비밀번호이미지" />
@@ -71,8 +86,8 @@
                 value
               />
             </div>
-            <div class="formItem inputMg">
-              <img src="./images/lock.png" alt="비밀번호이미지" />
+            <div class="formItem inputSpace">
+              <img src="./images/lockCheck.png" alt="비밀번호이미지" />
               <input
                 type="password"
                 id="pwd2"
@@ -82,6 +97,8 @@
                 value
               />
             </div>
+            <div class="errorText" id="pwdMsg" style="display: none"></div>
+
             <!-- 이름,닉네임-->
             <div class="formItem">
               <img src="./images/user.png" alt="이름이미지" />
@@ -94,7 +111,7 @@
                 value
               />
             </div>
-            <div class="formItem inputMg">
+            <div class="formItem inputSpace">
               <img src="./images/nickName.png" alt="닉네임이미지" />
               <input
                 type="text"
@@ -105,6 +122,9 @@
                 value
               />
             </div>
+            <div class="errorText" id="nameMsg" style="display: none"></div>
+            <div class="errorText" id="nickNameMsg" style="display: none"></div>
+
             <!-- 휴대전화번호, 생년월일 -->
             <div class="formItem">
               <img src="./images/thickPhone.png" alt="휴대전화이미지" />
@@ -117,7 +137,7 @@
                 pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
               />
             </div>
-            <div class="formItem inputMg">
+            <div class="formItem inputSpace">
               <img src="./images/birthDate.png" alt="달력이미지" />
               <input
                 type="text"
@@ -128,8 +148,10 @@
                 value
               />
             </div>
+            <div class="errorText" id="phoneMsg" style="display: none"></div>
+            <div class="errorText" id="birthMsg" style="display: none"></div>
             <!-- 성별 -->
-            <div class="formItem inputMg">
+            <div class="formItem inputSpace">
               <select name="gender" id="gender">
                 <option value="gender">성별</option>
                 <option value="male">남성</option>
@@ -137,6 +159,7 @@
                 <option value="other">그 외</option>
               </select>
             </div>
+            <div class="errorText" id="genderMsg" style="display: none"></div>
             <!-- 주소 -->
             <div class="formItemAddr">
               <input
@@ -176,6 +199,7 @@
                 class="inputAddr"
               />
             </div>
+            <div class="errorText" id="addrMsg" style="display: none"></div>
             <!-- 버튼 -->
           </div>
           <div class="submitBttn">
@@ -185,5 +209,9 @@
       </div>
     </main>
     <footer></footer>
+
+    <!-- 다음 주소 api -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="./js/joinForm.js"></script>
   </body>
 </html>

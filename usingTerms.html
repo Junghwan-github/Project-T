@@ -6,6 +6,9 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="./css/joinForm.css" />
+  
+  
+  
 </head>
 <body>
   <header>
@@ -22,39 +25,45 @@
   <main>
     <div class="container">
       <form action="#" method="post" class="joinForm">
-        <div>
+        <div class="termInfo">
           <h1>이용 약관 안내</h1>
+          <ul>
+            <li><img src="./images/selected1.png" alt="1" /></li>
+            <li><img src="./images/2_1.png" alt="2" /></li>
+            <li><img src="./images/3_1.png" alt="3" /></li>
+          </ul>
           
           <div class="privacyInfo">
             <div id="checkTerm1">
-              <textarea></textarea><br />
-              <input type="radio" id="termResYes1" value="Y" />
-              <label for="termRes1">동의합니다.</label>
-            </div>
-            <div id="checkTerm2">
-              <textarea></textarea><br />
-              <input
+              <iframe src="./txt/개인정보 수집 및 이용(가안).txt" frameborder="1"></iframe><br>
+              <div>
+                <input
                 type="radio"
-                id="termResYes2"
-                value="Y"
-                name="checkTerm2"
-              />
-              <label for="termResYes2">동의합니다.</label>
-              <input
-                type="radio"
-                id="termResNo1"
+                id="disagreeCheckbox"
                 value="N"
-                name="checkTerm2"
+                name="checkTerm1"
               />
-              <label for="termResNo1">동의하지 않습니다.</label>
+                <label for="disagreeCheckbox">동의하지 않습니다.</label>
+              </div>
+              <div>
+                <input type="radio" id="agreeCheckbox" value="Y" name="checkTerm1"/>
+                <label for="agreeCheckbox">동의합니다.</label>
+              </div>
+              
             </div>
-            <div id="allCheck">
+            
+            <!-- <div id="allCheck">
               <input type="checkbox" id="chkAll" />
               <label for="chkAll"><span>전체 동의하기</span></label>
-            </div>
+            </div> -->
           </div>
-        </div>
+          <div class="termCheckBttn">
+            <button type="click" value="약관 동의" >회원 정보 등록</button>
+          </div>
         </form>
+        </div>
+        <script src="./js/joinForm.js"></script>
+        
   </main>
 
 </body>

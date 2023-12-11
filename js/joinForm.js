@@ -1,3 +1,63 @@
+/* 이용약관 동의 시 -> 회원정보 기입페이지 연결 */
+const termSubmitBttn = document.querySelector(".termCheckBttn button");
+
+function checkAgreement(event) {
+  event.preventDefault();
+  let agreeCheckbox = document.getElementById("agreeCheckbox");
+
+  if (agreeCheckbox.checked) {
+    window.location.href = "/Project-T/joinForm.html";
+
+    return true;
+  } else {
+    alert("약관에 동의해야 합니다.");
+    return false;
+  }
+}
+
+termSubmitBttn.addEventListener("click", checkAgreement);
+
+/* 이메일 유효성 검사 */
+
+function validateEmail(event) {
+  event.preventDefault();
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let emailId = document.getElementById("emailId").value;
+  let emailDomain = document.getElementById("emailDomain").value;
+  let selectedDomain = document.getElementById("domainSelect").value;
+  let mail = emailId + "@" + emailDomain;
+
+  /*  idMsg = document.getElementById("idMsg");
+  errorText = document.createElement("span"); */
+
+  if (!emailId) {
+    /* errorText.innerText = "이메일아이디를 입력해주세요.";
+    errorText.appendChild(idMsg);
+    idMsg.classList.toggle("errorView"); */
+    alert("이메일아이디를 입력해주세요.");
+    document.querySelector("#emailId").focus();
+    return false;
+  }
+  if (!emailDomain) {
+    alert("도메인을 입력해주세요");
+    document.querySelector("#emailDomain").focus();
+    return false;
+  }
+
+  if (!emailRegex.test(mail)) {
+    alert("이메일을 형식에 맞게 입력해주세요.");
+    return false;
+  }
+
+  console.log(mail);
+}
+
+function updateDomain() {
+  let selectedDomain = document.getElementById("domainSelect").value;
+  document.getElementById("emailDomain").value = selectedDomain;
+}
+
+/* 주소 메서드 */
 function execDaumPostcode() {
   new daum.Postcode({
     oncomplete: function (data) {
