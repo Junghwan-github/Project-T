@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="./css/joinForm.css" />
-  
-  
+  <link rel="stylesheet" href="./css/usingTerms.css" />
   
 </head>
 <body>
+  <div id="headerBack"></div>
   <header>
     <!-- 네비게이션 -->
     <nav>
@@ -23,6 +22,7 @@
   </header>
 
   <main>
+    
     <div class="container">
       <form action="#" method="post" class="joinForm">
         <div class="termInfo">
@@ -52,19 +52,35 @@
               
             </div>
             
-            <!-- <div id="allCheck">
-              <input type="checkbox" id="chkAll" />
-              <label for="chkAll"><span>전체 동의하기</span></label>
-            </div> -->
+            
           </div>
           <div class="termCheckBttn">
             <button type="click" value="약관 동의" >회원 정보 등록</button>
           </div>
         </form>
         </div>
-        <script src="./js/joinForm.js"></script>
+        <script>
+          /* 이용약관 동의 시 -> 회원정보 기입페이지 연결 */
+          const termSubmitBttn = document.querySelector(".termCheckBttn button");
+
+          function checkAgreement(event) {
+            event.preventDefault();
+            let agreeCheckbox = document.getElementById("agreeCheckbox");
+
+            if (agreeCheckbox.checked) {
+              window.location.href = "/Project-T/joinForm.html";
+
+              return true;
+            } else {
+              alert("약관에 동의해야 합니다.");
+              return false;
+            }
+          }
+
+          termSubmitBttn.addEventListener("click", checkAgreement);
+        </script>
         
   </main>
-
+  <footer></footer>
 </body>
 </html>

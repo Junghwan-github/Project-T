@@ -3,7 +3,7 @@
 #logo a {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #87c16c;
+  color: #28536a;
   position: absolute;
   top: 50%;
   left: 0;
@@ -12,6 +12,21 @@
 
 header {
   width: 100%;
+}
+
+#headerBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 800px;
+  z-index: -999;
+  overflow: hidden;
+  background: linear-gradient(
+    138.12017810652605deg,
+    rgba(190, 224, 206, 1) 4.6750805585392055%,
+    rgba(253, 235, 224, 1) 64.93286788399571%
+  );
 }
 
 header > nav {
@@ -58,82 +73,79 @@ main {
 }
 
 .container {
-  width: 100%;
+  width: 1180px;
+  height: 1000px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.joinForm > div > h1,
+.joinForm2 {
+  /* width: 800px;
+  height: 100%;
+  margin: 0 auto; */
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 0 auto;
+  width: 420px;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+}
+
 .joinForm2 > div > h1 {
   font-size: 2.4rem;
-  margin-bottom: 30px;
+
+  padding-left: 10px;
+  color: #28536a;
 }
 
-.joinInfo,
-.termInfo {
+.joinInfo {
   width: 420px;
-  height: 70px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.joinInfo ul {
+  float: right;
 }
 
 .joinInfo h1,
 .joinInfo ul,
-.joinInfo ul li,
-.termInfo h1,
-.termInfo ul,
-.termInfo ul li {
+.joinInfo ul li {
   display: inline-block;
 }
 
-.joinInfo ul,
-.termInfo ul {
-  float: right;
-}
-
-.joinInfo ul img:nth-child(n),
-.termInfo ul img:nth-child(n) {
+.joinInfo ul img:nth-child(n) {
   width: 25px;
   height: 25px;
   margin: 0 5px;
 }
 
-.privacyInfo {
-  margin-bottom: 40px;
-}
-
-.privacyInfo iframe {
-  width: 414px;
-  height: 450px;
+.formItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* position: relative; */
+  width: 400px;
+  height: 35px;
+  margin: 0 auto;
   background-color: #fff;
-  border: 3px solid #cee8c4;
+  border: 3px solid #dce6d7;
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.privacyInfo div > div {
-  float: right;
-  display: flex;
-  align-items: center;
-}
-.privacyInfo div > div > input {
-  margin: 5px 5px 5px 5px;
-}
-.privacyInfo div > div > label {
-  font-size: 1.4rem;
-  vertical-align: baseline;
-}
-.formItem {
-  position: relative;
-}
-
-.formItem input::placeholder {
+input::placeholder {
   color: #999;
 }
 
 .email {
   box-sizing: border-box;
-  width: 150px;
-  height: 38px;
-  padding-left: 40px;
+  width: 110px;
+  height: 100%;
+  padding-left: 15px;
   border: none;
   border-radius: 10px;
 }
@@ -143,44 +155,42 @@ main {
 
 .formList div:first-child select {
   box-sizing: border-box;
-  width: 100px;
-}
-
-.formItem {
-  width: 420px;
-  height: 40px;
-  background-color: #fff;
-  border: 3px solid #cee8c4;
+  padding-left: 15px;
+  width: 80px;
+  height: 100%;
   border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: #999;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
 }
 
 .joinInput {
-  width: 100%;
+  width: 350px;
   height: 100%;
+
   display: inline-block;
   box-sizing: border-box;
   border: none;
   border-radius: 10px;
-  padding-left: 40px;
+  padding-left: 10px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .formItem img:nth-child(n) {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  left: 15px;
+  left: 15px; */
+  /* transform: translate(0, -50%); */
   width: 15px;
   height: 15px;
-  transform: translate(0, -50%);
+  margin: 10px 0px;
 }
 
-.inputSpace {
-  margin-bottom: 25px;
-}
-.formList select {
-  width: 420px;
-  height: 40px;
+select[name="gender"] {
+  width: 400px;
+  height: 100%;
   padding-left: 35px;
   border-radius: 10px;
   color: #999;
@@ -188,16 +198,30 @@ main {
   border: none;
   border-radius: 10px;
 }
+
+input {
+  outline: none;
+}
+
 /* 주소창 */
+
+.formItemAddr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 400px;
+  margin: 0 auto;
+}
 
 .inputAddr {
   box-sizing: border-box;
-  width: 210px;
+  width: 200px;
   height: 30px;
   margin-bottom: 5px;
   padding-left: 10px;
 
-  border: 3px solid #cee8c4;
+  border: 3px solid #dce6d7;
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -205,6 +229,8 @@ main {
 .formItemAddr input[type*="button"] {
   padding: 3px 10px;
   border-radius: 10px;
+  width: 200px;
+  height: 30px;
   border: none;
 
   background-color: #87c16c;
@@ -238,17 +264,18 @@ main {
 }
 
 /* error Msg */
-.errorText {
-  list-style-type: disc;
+.errorMsg {
+  height: 15px;
   color: red;
+  line-height: 1.5;
+  font-size: 1rem;
+  padding-left: 20px;
+  margin: 5px 0;
+}
+.errorFocus {
+  border: 1px solid red;
 }
 
-.errorView {
-  display: inline-block;
-}
-
-/* footer */
-footer {
-  width: 420px;
-  height: 300px;
+.hide {
+  display: none;
 }

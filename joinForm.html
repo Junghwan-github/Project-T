@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/joinForm.css" />
   </head>
   <body>
+    <div id="headerBack"></div>
     <header>
       <!-- 네비게이션 -->
       <nav>
@@ -21,12 +22,7 @@
     <!-- 메인 -->
     <main>
       <div class="container">
-        <form
-          action="#"
-          method="post"
-          class="joinForm2"
-          onsubmit="validateEmail(event)"
-        >
+        <form action="#" method="post" class="joinForm2">
           <div class="joinInfo">
             <h1>회원 가입</h1>
             <ul>
@@ -37,11 +33,11 @@
           </div>
           <div class="formList">
             <!-- 이메일 아이디 -->
-            <div class="formItem inputSpace">
+            <div class="formItem" id="emailId">
               <img src="./images/user.png" alt="이름이미지" />
               <input
                 type="text"
-                id="emailId"
+                id="id"
                 name="id"
                 placeholder="이메일"
                 class="email"
@@ -73,14 +69,21 @@
                 <option value="yahoo.com">yahoo.com</option>
               </select>
             </div>
-            <div class="errorText" id="idMsg" style="display: none"></div>
+            <div class="errorMsg">
+              <div class="idfailMsg hide">
+                아이디는 영어 또는 숫자만 입력 가능합니다.
+              </div>
+              <div class="idfailMsg2 hide">아이디는 6~18글자이어야 합니다.</div>
+              <div class="idfailMsg3 hide">도메인을 올바르게 입력해주세요.</div>
+            </div>
+
             <!-- 비밀번호,비밀번호 입력 -->
             <div class="formItem">
               <img src="./images/lock.png" alt="비밀번호이미지" />
               <input
                 type="password"
-                id="pwd1"
-                name="pwd1"
+                id="password1"
+                name="password1"
                 placeholder="비밀번호"
                 class="joinInput"
                 value
@@ -90,14 +93,20 @@
               <img src="./images/lockCheck.png" alt="비밀번호이미지" />
               <input
                 type="password"
-                id="pwd2"
-                name="pwd2"
+                id="password2"
+                name="password2"
                 placeholder="비밀번호 확인"
                 class="joinInput"
                 value
               />
             </div>
-            <div class="errorText" id="pwdMsg" style="display: none"></div>
+            <div class="errorMsg">
+              <div class="pwdfailMsg hide">
+                비밀번호는 8~20글자, 영문, 숫자, 특수문자(@, $, !, %, *, #, ?,
+                &)를 사용하여야 합니다.
+              </div>
+              <div class="pwdfailMsg2 hide">비밀번호가 일치하지 않습니다.</div>
+            </div>
 
             <!-- 이름,닉네임-->
             <div class="formItem">
@@ -111,7 +120,7 @@
                 value
               />
             </div>
-            <div class="formItem inputSpace">
+            <div class="formItem">
               <img src="./images/nickName.png" alt="닉네임이미지" />
               <input
                 type="text"
@@ -122,8 +131,16 @@
                 value
               />
             </div>
-            <div class="errorText" id="nameMsg" style="display: none"></div>
-            <div class="errorText" id="nickNameMsg" style="display: none"></div>
+            <div class="errorMsg">
+              <div class="uNameFailMsg hide">
+                이름은 한글, 영문 대/소문자를 사용해 주세요. (특수기호, 공백
+                사용 불가)
+              </div>
+              <div class="nickNameFailMsg hide">
+                닉네임은 2~8글자, 한글, 숫자, 영문 대/소문자를 사용해
+                주세요.(특수기호,공백 사용 불가)
+              </div>
+            </div>
 
             <!-- 휴대전화번호, 생년월일 -->
             <div class="formItem">
@@ -133,11 +150,10 @@
                 id="phone"
                 name="phone"
                 class="joinInput"
-                placeholder="010-1111-1111"
-                pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                placeholder='휴대전화번호 ("-" 빼고 입력)'
               />
             </div>
-            <div class="formItem inputSpace">
+            <div class="formItem">
               <img src="./images/birthDate.png" alt="달력이미지" />
               <input
                 type="text"
@@ -148,8 +164,16 @@
                 value
               />
             </div>
-            <div class="errorText" id="phoneMsg" style="display: none"></div>
-            <div class="errorText" id="birthMsg" style="display: none"></div>
+            <div class="errorMsg">
+              <div class="phoneFailMsg hide">
+                휴대전화번호는 10~11자의 숫자만 사용하여야 합니다. (예 :
+                01012345678)
+              </div>
+              <div class="birthFailMsg hide">
+                생년월일은 8자의 숫자만 사용하여야 합니다. (예 : 19990101)
+              </div>
+            </div>
+
             <!-- 성별 -->
             <div class="formItem inputSpace">
               <select name="gender" id="gender">
@@ -159,7 +183,9 @@
                 <option value="other">그 외</option>
               </select>
             </div>
-            <div class="errorText" id="genderMsg" style="display: none"></div>
+            <div class="errorMsg">
+              <p id="genderMsg"></p>
+            </div>
             <!-- 주소 -->
             <div class="formItemAddr">
               <input
@@ -199,7 +225,7 @@
                 class="inputAddr"
               />
             </div>
-            <div class="errorText" id="addrMsg" style="display: none"></div>
+            <div class="errorMsg" id="addrMsg" style="display: none"></div>
             <!-- 버튼 -->
           </div>
           <div class="submitBttn">
