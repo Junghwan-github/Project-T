@@ -77,19 +77,16 @@ main {
   height: 1000px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .joinForm2 {
-  /* width: 800px;
-  height: 100%;
-  margin: 0 auto; */
   background-color: #ffffff;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   margin: 0 auto;
   width: 420px;
-  height: 700px;
+  height: 750px;
   border: none;
   border-radius: 10px;
 }
@@ -123,22 +120,28 @@ main {
   margin: 0 5px;
 }
 
+.formBorder {
+  border: 3px solid #dce6d7;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+.formDivine {
+  border-bottom: 3px solid #dce6d7;
+}
 .formItem {
   display: flex;
   justify-content: space-around;
   align-items: center;
   /* position: relative; */
-  width: 400px;
+  width: 415px;
   height: 35px;
-  margin: 0 auto;
-  background-color: #fff;
-  border: 3px solid #dce6d7;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0;
+  background-color: transparent;
 }
 
 input::placeholder {
   color: #999;
+  font-size: 1.2rem;
 }
 
 .email {
@@ -148,6 +151,7 @@ input::placeholder {
   padding-left: 15px;
   border: none;
   border-radius: 10px;
+  background-color: transparent;
 }
 #emailDomain {
   padding: 0 10px;
@@ -158,17 +162,12 @@ input::placeholder {
   padding-left: 15px;
   width: 80px;
   height: 100%;
-  border-radius: 10px;
-  color: #999;
-  font-weight: 500;
-  border: none;
-  border-radius: 10px;
 }
 
 .joinInput {
   width: 350px;
   height: 100%;
-
+  background-color: transparent;
   display: inline-block;
   box-sizing: border-box;
   border: none;
@@ -192,11 +191,18 @@ select[name="gender"] {
   width: 400px;
   height: 100%;
   padding-left: 35px;
-  border-radius: 10px;
-  color: #999;
+}
+
+select {
+  outline: none;
+
   font-weight: 500;
-  border: none;
+  font-size: 1.2rem;
+  color: #999;
+
   border-radius: 10px;
+  border: none;
+  background-color: transparent;
 }
 
 input {
@@ -210,43 +216,43 @@ input {
   flex-wrap: wrap;
   justify-content: center;
 
-  width: 400px;
+  width: 420px;
   margin: 0 auto;
 }
 
 .inputAddr {
   box-sizing: border-box;
-  width: 200px;
+  width: 210px;
   height: 30px;
   margin-bottom: 5px;
-  padding-left: 10px;
+  padding-left: 15px;
 
   border: 3px solid #dce6d7;
   border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  background-color: transparent;
 }
 
 .formItemAddr input[type*="button"] {
   padding: 3px 10px;
   border-radius: 10px;
-  width: 200px;
+  width: 210px;
   height: 30px;
   border: none;
+  font-size: 1.2rem;
 
-  background-color: #87c16c;
+  background-color: #28536a;
   color: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 /* 전송 버튼 */
-.submitBttn,
-.termCheckBttn {
+.submitBttn {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
-.submitBttn button,
-.termCheckBttn button {
+.submitBttn button {
   margin: 0 auto;
   width: 250px;
   height: 40px;
@@ -254,7 +260,7 @@ input {
   border-radius: 10px;
   border: none;
 
-  background-color: #87c16c;
+  background-color: #28536a;
   color: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   font-weight: 600;
@@ -265,7 +271,7 @@ input {
 
 /* error Msg */
 .errorMsg {
-  height: 15px;
+  height: 25px;
   color: red;
   line-height: 1.5;
   font-size: 1rem;

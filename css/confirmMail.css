@@ -65,7 +65,8 @@ header > nav > ul .tab {
   width: 600px;
   height: 290px;
 }
-/* main */
+
+/* main 폼 */
 main {
   width: 1180px;
   margin: 0 auto;
@@ -73,93 +74,145 @@ main {
 
 .container {
   width: 1180px;
-  height: 800px;
+  height: 1000px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
-.joinForm {
-  width: 800px;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.joinForm > div > h1 {
-  font-size: 2.4rem;
-  margin-bottom: 30px;
-}
-
-.termInfo {
+.joinForm2 {
   background-color: #ffffff;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   margin: 0 auto;
   width: 420px;
-  height: 600px;
+  height: 500px;
   border: none;
   border-radius: 10px;
 }
 
-.termInfo h1 {
+.joinForm2 > div > h1 {
+  font-size: 2.4rem;
+
   padding-left: 10px;
   color: #28536a;
 }
 
-.termInfo ul {
+.joinInfo {
+  width: 420px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.joinInfo ul {
   float: right;
 }
-.termInfo h1,
-.termInfo ul,
-.termInfo ul li {
+
+.joinInfo h1,
+.joinInfo ul,
+.joinInfo ul li {
   display: inline-block;
 }
 
-.termInfo ul img:nth-child(n) {
+.joinInfo ul img:nth-child(n) {
   width: 25px;
   height: 25px;
   margin: 0 5px;
 }
 
-.privacyInfo {
-  width: 400px;
-  margin: 0 auto;
+.mailMsg {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.privacyInfo iframe {
-  width: 100%;
-  height: 420px;
-  margin-bottom: 5px;
+.mailMsg > p,
+.mailMsg > p > span {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
 
+.formBorder {
   border: 3px solid #dce6d7;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-}
-
-.privacyInfo div > div {
-  float: right;
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  /* position: relative; */
+  width: 415px;
+  height: 35px;
+  margin: 0;
+  background-color: transparent;
 }
-.privacyInfo div > div > input {
-  margin: 5px 5px 5px 5px;
+
+.formBorder > span {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: red;
 }
-.privacyInfo div > div > label {
+
+.formBorder > button {
+  box-sizing: border-box;
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: #28536a;
+  color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-weight: 600;
+}
+
+input {
+  outline: none;
+}
+input::placeholder {
+  color: #999;
   font-size: 1.4rem;
-  vertical-align: baseline;
 }
-
-.termCheckBttn {
-  margin-top: 40px;
-  width: 100%;
-  height: 60px;
-}
-
-.termCheckBttn button {
-  margin: 0 auto;
+.AuthenticationCodeInput {
   width: 250px;
+  height: 100%;
+  background-color: transparent;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.errorMsg {
+  box-sizing: border-box;
+  height: 30px;
+  color: red;
+  line-height: 1.5;
+  font-size: 2rem;
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+.hide {
+  display: none;
+}
+
+.submitBttns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 100px;
+}
+.submitBttns > button {
+  /* margin: 0 auto; */
+  width: 200px;
   height: 40px;
-  display: block;
 
   border-radius: 10px;
   border: none;

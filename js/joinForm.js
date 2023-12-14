@@ -50,14 +50,14 @@ function isMatch(password1, password2) {
   return password1 === password2;
 }
 
-// 이름 형식 확인 (한글, 영어 대소문자만 가능 특수기호,공백 불가)
+// 이름 형식 확인 ( 한글, 영어 대소문자만 가능 특수기호,공백 불가 )
 function validateUName(value) {
   return /^[가-힣a-zA-Z]+$/.test(value);
 }
 
-// 닉네임 형식 확인 (한글, 숫자, 영어 대소문자만 가능 최소 2글자 최대8글자)
+// 닉네임 형식 확인 ( 2 ~ 10글자 한글, 숫자, 영어 대소문자만 가능 )
 function validateNickName(value) {
-  return /^[가-힣a-zA-Z0-9]{2,8}$/.test(value);
+  return /^[가-힣a-zA-Z0-9]{2,10}$/.test(value);
 }
 
 /* 휴대전화 번호 형식 확인 
@@ -128,10 +128,10 @@ password2.onkeyup = function () {
 
 // 이메일 형식 검사
 emailDomain.onkeyup = function () {
-  let mail = id.value + "@" + emailDomain.value;
+  let uEmail = id.value + "@" + emailDomain.value;
   if (emailDomain.value.length !== 0) {
-    if (emailRegex(mail)) {
-      console.log(emailRegex(mail));
+    if (emailRegex(uEmail)) {
+      console.log(emailRegex(uEmail));
       idFailMsg.classList.add("hide");
       idFailMsg2.classList.add("hide");
       idFailMsg3.classList.add("hide");
@@ -152,7 +152,6 @@ uName.onkeyup = function () {
   if (uName.value.length !== 0) {
     if (validateUName(uName.value)) {
       uNameFailMsg.classList.add("hide");
-      nickNameFailMsg.classList.add("hide");
     } else {
       uNameFailMsg.classList.remove("hide");
     }
@@ -166,7 +165,6 @@ nickName.onkeyup = function () {
   if (nickName.value.length !== 0) {
     if (validateNickName(nickName.value)) {
       nickNameFailMsg.classList.add("hide");
-      uNameFailMsg.classList.add("hide");
     } else {
       nickNameFailMsg.classList.remove("hide");
     }
@@ -180,7 +178,6 @@ phone.onkeyup = function () {
   if (phone.value.length !== 0) {
     if (validatePhone(phone.value)) {
       phoneFailMsg.classList.add("hide");
-      birthFailMsg.classList.add("hide");
     } else {
       phoneFailMsg.classList.remove("hide");
     }
@@ -194,7 +191,6 @@ birthDate.onkeyup = function () {
   if (birthDate.value.length !== 0) {
     if (validateBirth(birthDate.value)) {
       birthFailMsg.classList.add("hide");
-      phoneFailMsg.classList.add("hide");
     } else {
       birthFailMsg.classList.remove("hide");
     }
