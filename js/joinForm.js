@@ -1,22 +1,22 @@
-let id = document.getElementById("id");
-let emailDomain = document.getElementById("emailDomain");
-let selectedDomain = document.getElementById("domainSelect");
-let password1 = document.getElementById("password1");
-let password2 = document.getElementById("password2");
-let uName = document.getElementById("uName");
-let nickName = document.getElementById("nickName");
-let phone = document.getElementById("phone");
-let birthDate = document.getElementById("birthDate");
+const id = document.getElementById("id");
+const emailDomain = document.getElementById("emailDomain");
+const selectedDomain = document.getElementById("domainSelect");
+const password1 = document.getElementById("password1");
+const password2 = document.getElementById("password2");
+const uName = document.getElementById("uName");
+const nickName = document.getElementById("nickName");
+const phone = document.getElementById("phone");
+const birthDate = document.getElementById("birthDate");
 
-let idFailMsg = document.querySelector(".idFailMsg");
-let idFailMsg2 = document.querySelector(".idFailMsg2");
-let idFailMsg3 = document.querySelector(".idFailMsg3");
-let pwdFailMsg = document.querySelector(".pwdFailMsg");
-let pwdFailMsg2 = document.querySelector(".pwdFailMsg2");
-let uNameFailMsg = document.querySelector(".uNameFailMsg");
-let nickNameFailMsg = document.querySelector(".nickNameFailMsg");
-let phoneFailMsg = document.querySelector(".phoneFailMsg");
-let birthFailMsg = document.querySelector(".birthFailMsg");
+const idFailMsg = document.querySelector(".idFailMsg");
+const idFailMsg2 = document.querySelector(".idFailMsg2");
+const idFailMsg3 = document.querySelector(".idFailMsg3");
+const pwdFailMsg = document.querySelector(".pwdFailMsg");
+const pwdFailMsg2 = document.querySelector(".pwdFailMsg2");
+const uNameFailMsg = document.querySelector(".uNameFailMsg");
+const nickNameFailMsg = document.querySelector(".nickNameFailMsg");
+const phoneFailMsg = document.querySelector(".phoneFailMsg");
+const birthFailMsg = document.querySelector(".birthFailMsg");
 
 // 아이디 6자 이상 18자 이하
 function idLength(value) {
@@ -202,7 +202,7 @@ birthDate.onkeyup = function () {
 /* 주소 메서드 */
 function execDaumPostcode() {
   new daum.Postcode({
-    oncomplete: function (data) {
+    oncompconste: function (data) {
       // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
       // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
