@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-T</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="./css/confirmMail.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div id="headerBack"></div>
+    <header>
+      <!-- 네비게이션 -->
+      <nav>
+        <h1 id="logo"><a href="#">Project T</a></h1>
+        <ul>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">로그인</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <form action="#" method="post" class="joinForm2">
+          <div class="joinInfo">
+            <h1>이메일 인증</h1>
+            <ul>
+              <li><img src="./images/num1.png" alt="1" /></li>
+              <li><img src="./images/num2.png" alt="2" /></li>
+              <li><img src="./images/selected3.png" alt="3" /></li>
+            </ul>
+          </div>
+          <div class="formList">
+            <div class="mailMsg">
+              <p><span id="uEmail">qqq@wwww.www</span> 이메일 주소로</p>
+              <p>인증코드가 발송되었습니다.</p>
+              <p>이메일에 있는 인증코드를 입력해 주세요.</p>
+            </div>
+
+            <div class="formBorder">
+              <input
+                type="text"
+                id="mailAuthenticationCode"
+                placeholder="인증코드 6자리를 입력해 주세요."
+                class="AuthenticationCodeInput"
+                value=""
+                name="mailAuthenticationCode"
+              />
+              <span id="timer">00:00</span>
+              <button type="button" id="resendBttn">재전송</button>
+            </div>
+
+            <div class="errorMsg">
+              <div class="hide">성공코드</div>
+              <div class="hide">오류코드</div>
+            </div>
+          </div>
+          <div class="submitBttns">
+            <button id="successBttn" type="button">가입 완료 하기</button>
+            <button id="cancelBttn" type="button">돌아가기</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

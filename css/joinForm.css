@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+#logo a {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #28536a;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+}
+
+header {
+  width: 100%;
+}
+
+#headerBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 800px;
+  z-index: -999;
+  overflow: hidden;
+  background: linear-gradient(
+    138.12017810652605deg,
+    rgba(190, 224, 206, 1) 4.6750805585392055%,
+    rgba(253, 235, 224, 1) 64.93286788399571%
+  );
+}
+
+header > nav {
+  position: relative;
+  width: 1180px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+header > nav > ul {
+  float: right;
+  text-align: center;
+}
+
+header > nav > ul > li {
+  line-height: 80px;
+  display: inline-block;
+}
+
+header > nav > ul > li:first-child {
+  line-height: 80px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header > nav > ul > li > a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #111;
+  /* width: 120px; */
+}
+
+header > nav > ul .tab {
+  float: left;
+  width: 600px;
+  height: 290px;
+}
+
+/* main 가입 폼 */
+main {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1180px;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.joinForm2 {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 0 auto;
+  width: 420px;
+  height: 750px;
+  border: none;
+  border-radius: 10px;
+}
+
+.joinForm2 > div > h1 {
+  font-size: 2.4rem;
+
+  padding-left: 10px;
+  color: #28536a;
+}
+
+.joinInfo {
+  width: 420px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.joinInfo ul {
+  float: right;
+}
+
+.joinInfo h1,
+.joinInfo ul,
+.joinInfo ul li {
+  display: inline-block;
+}
+
+.joinInfo ul img:nth-child(n) {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+}
+
+.formBorder {
+  border: 1px solid #dce6d7;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+.formDivine {
+  border-bottom: 1px solid #dce6d7;
+}
+.formItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* position: relative; */
+  width: 415px;
+  height: 35px;
+  margin: 0;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: #999;
+  font-size: 1.4rem;
+}
+
+.email {
+  box-sizing: border-box;
+  width: 110px;
+  height: 100%;
+  padding-left: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+}
+#emailDomain {
+  padding: 0 10px;
+}
+
+.formList div:first-child select {
+  box-sizing: border-box;
+  padding-left: 15px;
+  width: 80px;
+  height: 100%;
+}
+
+.joinInput {
+  width: 350px;
+  height: 100%;
+  background-color: transparent;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.formItem img:nth-child(n) {
+  /* position: absolute;
+  top: 50%;
+  left: 15px; */
+  /* transform: translate(0, -50%); */
+  width: 15px;
+  height: 15px;
+  margin: 10px 0px;
+}
+
+select[name="gender"] {
+  width: 400px;
+  height: 100%;
+  padding-left: 35px;
+}
+
+select {
+  outline: none;
+
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #999;
+
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+input {
+  outline: none;
+}
+
+/* 주소창 */
+
+.formItemAddr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 420px;
+  margin: 0 auto;
+}
+
+.inputAddr {
+  box-sizing: border-box;
+  width: 210px;
+  height: 30px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+
+  border: 1px solid #dce6d7;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  background-color: transparent;
+}
+
+.formItemAddr input[type*="button"] {
+  padding: 3px 10px;
+  border-radius: 10px;
+  width: 210px;
+  height: 30px;
+  border: none;
+  font-size: 1.2rem;
+
+  background-color: #28536a;
+  color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* 전송 버튼 */
+.submitBttn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.submitBttn button {
+  margin: 0 auto;
+  width: 250px;
+  height: 40px;
+
+  border-radius: 10px;
+  border: none;
+
+  background-color: #28536a;
+  color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  word-spacing: 0.6rem;
+}
+
+/* error Msg */
+.errorMsg {
+  height: 25px;
+  color: red;
+  line-height: 1.5;
+  font-size: 1rem;
+  padding-left: 20px;
+  margin: 5px 0;
+}
+.errorFocus {
+  border: 1px solid red;
+}
+
+.hide {
+  display: none;
+}
