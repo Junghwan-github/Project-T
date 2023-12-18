@@ -24,7 +24,7 @@ function idLength(value) {
 }
 // 아이디 영어 또는 숫자만
 function onlyNumberAndEnglish(str) {
-  return /^[A-Za-z0-9][A-Za-z0-9]*$/.test(str);
+  return /^[A-Za-z0-9][A-Za-z0-9]{6,18}*$/.test(str);
 }
 
 // 이메일 형식 확인
